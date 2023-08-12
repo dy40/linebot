@@ -1,0 +1,66 @@
+services:
+- type: web
+  name: line-bot-python-flask
+  env: python
+  repo: https://github.com/dy40/linebot/tree/main
+  buildCommand: cd examples/flask-echo;pip install gunicorn -r requirements.txt
+  startCommand: cd examples/flask-echo;gunicorn app:app
+  plan: free
+  autoDeploy: false
+  envVars:
+  - key: ubteHqNvcMBz9cw2xlQxNtMKlRKD1VNbVA1/HKU6MI6p3YEmN2CmGMP1GM7Wg8eyiPwR8ikyFSn0kaXNCmm3jXZUA+MD8Am0YbtaYk3U4b59YWEGwQQBEic356Xr+cXs4BhXrLKJ1ptvxV5rDkzoYwdB04t89/1O/w1cDnyilFU=LINE_CHANNEL_ACCESS_TOKEN
+    sync: false
+  - key: 83e83985799c58bebf796b54406be6cb
+    sync: false
+# - type: web
+#   name: line-bot-python-flask-with-handler
+#   env: python
+#   repo: https://github.com/line/line-bot-sdk-python.git
+#   buildCommand: cd examples/flask-echo;pip install gunicorn -r requirements.txt
+#   startCommand: cd examples/flask-echo;gunicorn app_with_handler:app
+#   plan: free
+#   autoDeploy: false
+#   envVars:
+#   - key: LINE_CHANNEL_ACCESS_TOKEN
+#     sync: false
+#   - key: LINE_CHANNEL_SECRET
+#     sync: false
+# - type: web
+#   name: line-bot-python-flask-kitchensink
+#   env: python
+#   repo: https://github.com/line/line-bot-sdk-python.git
+#   buildCommand: cd examples/flask-kitchensink;pip install gunicorn -r requirements.txt
+#   startCommand: cd examples/flask-kitchensink;gunicorn app:app
+#   plan: free
+#   autoDeploy: false
+#   envVars:
+#   - key: LINE_CHANNEL_ACCESS_TOKEN
+#     sync: false
+#   - key: LINE_CHANNEL_SECRET
+#     sync: false
+# - type: web
+#   name: line-bot-python-simple-server
+#   env: python
+#   repo: https://github.com/line/line-bot-sdk-python.git
+#   buildCommand: cd examples/simple-server-echo;pip install -r requirements.txt
+#   startCommand: cd examples/simple-server-echo;python app.py
+#   plan: free
+#   autoDeploy: false
+#   envVars:
+#   - key: LINE_CHANNEL_ACCESS_TOKEN
+#     sync: false
+#   - key: LINE_CHANNEL_SECRET
+#     sync: false
+# - type: web
+#   name: line-bot-python-aiohttp
+#   env: python
+#   repo: https://github.com/line/line-bot-sdk-python.git
+#   buildCommand: cd examples/aiohttp-echo;pip install -r requirements.txt
+#   startCommand: cd examples/aiohttp-echo;python app.py
+#   plan: free
+#   autoDeploy: false
+#   envVars:
+#   - key: LINE_CHANNEL_ACCESS_TOKEN
+#     sync: false
+#   - key: LINE_CHANNEL_SECRET
+#     sync: false
